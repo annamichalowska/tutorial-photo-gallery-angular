@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My to do list</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Raleway:wght@700&family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .widget {
+        text-align: center;
+      }
+
+      .widget h2 {
+        color: greenyellow;
+        font-size: 75px;
+        font-family: "Poor story";
+        font-weight: 800;
+        margin-bottom: 10px;
+        margin-top: 40px;
+        -webkit-text-stroke: 0.1px black;
+      }
+      .widget input {
+        border-color: rgb(19, 63, 4);
+        border-radius: 10px;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+
+      .create-list {
+        padding: 5px 8px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: greenyellow;
+        border-color: rgb(19, 63, 4);
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+
+      .back {
+        text-decoration: none;
+        color: rgb(19, 63, 4);
+      }
+
+      .btn-back {
+        padding: 5px 15px;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: greenyellow;
+        border-color: rgb(19, 63, 4);
+        font-weight: 700;
+        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+          0px 2px 1px rgb(0 0 0 / 20%);
+      }
+
+      .list {
+        list-style-position: inside;
+        text-align: left;
+        font-size: 25px;
+        color: rgb(53, 53, 53);
+      }
+
+      .input-list {
+        display: flex;
+        justify-content: center;
+      }
+
+      .input-list input {
+        margin-right: 10px;
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+      }
+
+      .clear-list {
+        margin-top: 40px;
+        background-color: #ffa7b6;
+        color: rgb(92, 38, 38);
+        border-color: rgb(92, 38, 38);
+      }
+
+      .title-span {
+        color: #ffa7b6;
+      }
+
+      body {
+        background-color: rgb(174, 174, 174);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn-back">
+      <a href="index.html" class="back">Go back</a>
+    </button>
+
+    <div class="widget">
+      <h2>
+        My <span class="title-span">to</span> do
+        <span class="title-span">list</span>
+      </h2>
+      <div class="input-list">
+        <input type="text" id="list-input" placeholder="New note" />
+        <button type="submit" class="create-list" data-create>
+          <svg class="icon" width="30" height="30">
+            <use xlink:href="./icons/icons.svg#icon-enter"></use>
+          </svg>
+        </button>
+      </div>
+      <ol id="list" class="list"></ol>
+    </div>
+    <button type="button" class="clear-list btn-back" data-clear>
+      Clear list
+    </button>
+
+    <script src="js/to_do_list.js" type="module"></script>
+  </body>
+</html>
